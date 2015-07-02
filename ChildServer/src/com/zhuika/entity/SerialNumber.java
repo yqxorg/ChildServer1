@@ -1,0 +1,86 @@
+package com.zhuika.entity;
+
+public class SerialNumber  implements java.io.Serializable {
+	private static final long serialVersionUID = 1L;
+	private Integer id;
+    private String serialNumber;
+    private String status;
+    private String ef;  
+    private String setGps;
+    private String gpsStatus;
+    private String isReg;
+    private String lbs;
+    private String listenStatus;
+    private String online;
+    
+    public String getOnline() {
+		return online;
+	}
+	public void setOnline(String online) {
+		this.online = online;
+	}
+	public String getListenStatus() {
+		return listenStatus;
+	}
+	public void setListenStatus(String listenStatus) {
+		this.listenStatus = listenStatus;
+	}
+	public String getIsReg() {
+		return isReg;
+	}
+	public void setIsReg(String isReg) {
+		this.isReg = isReg;
+	}
+	public String getEf() {
+		return ef;
+	}
+	public String getSetGps() {
+		return setGps;
+	}
+	public void setSetGps(String setGps) {
+		this.setGps = setGps;
+	}
+	public String getGpsStatus() {
+		return gpsStatus;
+	}
+	public void setGpsStatus(String gpsStatus) {
+		this.gpsStatus = gpsStatus;
+	}
+	public void setEf(String ef) {
+		this.ef = ef;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getSerialNumber() {
+		return serialNumber;
+	}
+	public void setSerialNumber(String serialNumber) {
+		this.serialNumber = serialNumber;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getLbs() {
+		return lbs;
+	}
+	public void setLbs(String lbs) {
+		this.lbs = lbs;
+	}
+	@Override
+	public String toString() {
+		return "SerialNumber [id=" + id + ", serialNumber=" + serialNumber
+				+ ", status=" + status + ", ef=" + ef + ", setGps=" + setGps
+				+ ", gpsStatus=" + gpsStatus + ", isReg=" + isReg + ", lbs="
+				+ lbs + ", listenStatus=" + listenStatus + ", online=" + online
+				+ "]";
+	}
+	
+}
