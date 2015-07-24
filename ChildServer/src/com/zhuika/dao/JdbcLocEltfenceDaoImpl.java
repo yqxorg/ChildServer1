@@ -73,6 +73,12 @@ public class JdbcLocEltfenceDaoImpl implements ILocEltfenceDao {
 			{
 				where += " and a.FSerialnumber = '"+ map.get("FSerialnumber")+"'" ;
 			}
+			if(map.containsKey("FAreaNum") && map.get("FAreaNum")!=null&& !map.get("FAreaNum").toString().equals(""))
+			{
+				where += " and a.FEltFenceID = "+ map.get("FAreaNum")+"" ;
+			}
+			
+			
 		}
 		sql.append(where);
 		sql.append(" order by a.FIncreaseID desc ");

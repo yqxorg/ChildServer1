@@ -4,6 +4,7 @@ package com.zhuika.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.UUID;
 
 import com.zhuika.entity.RtPosition;
 import com.zhuika.entity.SerialNumber;
@@ -13,13 +14,17 @@ import com.zhuika.util.DBUtil;
 public class JdbcSerialNumberDAOImpl  implements ISerialNumberDao{
 	public void addSerialNumber(SerialNumber serialNumber) {
 		try {
-			String sql2="insert into serialnumber (serialnumber,ef) values(?,?);";
+			String sql2="insert into serialnumber (serialnumber,ef,funiqueid) values(?,?,?);";
 			String sql="insert into locationinfo (serialnumber) values(?);";
 			Connection con=DBUtil.getConnection();
 			PreparedStatement ps2=con.prepareStatement(sql2);
 			PreparedStatement ps=con.prepareStatement(sql);
 			ps2.setObject(1, serialNumber.getSerialNumber());
 			ps2.setObject(2, serialNumber.getEf());
+			
+			String distributorid = UUID.randomUUID().toString();
+			ps2.setObject(3, distributorid);
+			
 			ps.setObject(1, serialNumber.getSerialNumber());
 			ps2.executeUpdate();
 			ps.executeUpdate();

@@ -2,6 +2,6 @@
 <CONFIG>
 	 <VALUE>  
 	     <socketip>127.0.0.1</socketip>
-	     <socketport>8085</socketport>
+	     <socketport>8075</socketport>
 	 </VALUE>
  </CONFIG>  

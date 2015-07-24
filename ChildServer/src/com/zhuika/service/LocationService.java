@@ -324,7 +324,7 @@ public class LocationService {
 		}
 		lidao.update(li);
 		// ¶ÌÐÅÄ£¿é
-		SendSmsService.controlSMS(ctx, serialNumber, serialNum, locationbd, end, address);
+		SendSmsService.controlSMS(ctx, serialNumber, serialNum, locationbd, end, address,location);
 
 	}		
 }

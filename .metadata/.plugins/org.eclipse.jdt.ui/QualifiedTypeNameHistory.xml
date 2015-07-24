@@ -9,4 +9,5 @@
 <fullyQualifiedTypeName name="com.zhuika.util.CommonUtil"/>
 <fullyQualifiedTypeName name="com.zhuika.entity.LocElectfence"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="com.users.ejb.EjbEnum.EltLocEnum"/>
 </qualifiedTypeNameHistroy>

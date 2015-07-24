@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
+import com.users.ejb.EjbEnum.EltLocEnum;
 import com.zhuika.dao.DAOException;
 import com.zhuika.dao.DAOFactory;
 import com.zhuika.dao.IElectFenceDao;
@@ -31,14 +32,22 @@ public class SendSmsService {
 	//检查变化状态
 	private static int CheckExist(LocElectfence locElt,ElectFence efItem){
 		
-		String skey = locElt.getFserialnumber()+"_"+efItem.getAreaNum();		
+		String skey = locElt.getFserialnumber()+"_"+efItem.getId();		
 		
 		if(m_hashLocElt.containsKey(skey))
 		{
 			LocElectfence locEltHs = m_hashLocElt.get(skey);
 			
+			Double locescope = locEltHs.getFeltscope();
 			
-			Double d1 = locEltHs.getFdistance() - locEltHs.getFeltscope();
+			if(locescope == null){
+				locescope = 0D;
+			}
+			
+			//历史-距离（当前gps与围栏中心的距离）离半径的距离；
+			Double d1 = locEltHs.getFdistance() - locescope;
+			
+			//这次-距离（当前gps与围栏中心的距离）离半径的距离；
 			Double d2 = locElt.getFdistance() - locElt.getFeltscope();
 			
 			//从围栏外进围栏内
@@ -105,7 +114,9 @@ public class SendSmsService {
 				locElt.setFlatitude(mlat);										
 				locElt.setFserialnumber(serialNumber);				
 				locElt.setFaddress(Address);				
-				locElt.setFdatastatus(null);				
+				locElt.setFdatastatus(null);	
+				locElt.setFfieldstatus(EltLocEnum.IsSelected.value());
+				
 				locEltdao.addLocEltfence(locElt);
 			}
 			catch(Exception ex)
@@ -118,6 +129,7 @@ public class SendSmsService {
 		}
 		//yangqinxu 进出电子围栏记录  begin 
 		try{
+			boolean isSetSelected = false;
 			
 			for(int i=0;i<list.size();i++)
 			{
@@ -126,10 +138,11 @@ public class SendSmsService {
 				//获取之前最新的数据用来做变化对比
 				HashMap<String, String> mapCondition = new HashMap<String, String>();
 				mapCondition.put("FSerialnumber", serialNumber);
+				mapCondition.put("FAreaNum", Integer.toString(efItem.getId()));
 				List<LocElectfence> listLocElt =  locEltdao.listLocElectfence(mapCondition);
 				if(listLocElt !=null && listLocElt.size()>0)
 				{
-					String skey = serialNumber+"_"+efItem.getAreaNum();						
+					String skey = serialNumber+"_"+efItem.getId();						
 					m_hashLocElt.put(skey, listLocElt.get(0));						
 				}
 				
@@ -161,22 +174,27 @@ public class SendSmsService {
 
 				if(datastatus==1)
 				{
-					locElt.setFremark(String.format("前后两次定位从围栏外进围栏内,围栏编号:%s,围栏名称:%s", efItem.getAreaNum(),efItem.getName()));
+					locElt.setFremark(String.format("从外到内,围栏编号:%s,围栏名称:%s", efItem.getAreaNum(),efItem.getName()));
 				}
 				else if(datastatus==3)
 				{
-					locElt.setFremark(String.format("前后两次定位从围栏内到围栏外,围栏编号:%s,围栏名称:%s", efItem.getAreaNum(),efItem.getName()));
+					locElt.setFremark(String.format("从内到外,围栏编号:%s,围栏名称:%s", efItem.getAreaNum(),efItem.getName()));
 				}
 				else if(datastatus==4)
 				{
-					locElt.setFremark(String.format("前后两次定位一直在围栏外,围栏编号:%s,围栏名称:%s", efItem.getAreaNum(),efItem.getName()));
+					locElt.setFremark(String.format("保持在外,围栏编号:%s,围栏名称:%s", efItem.getAreaNum(),efItem.getName()));
 				}
 				else if(datastatus==5)
 				{
-					locElt.setFremark(String.format("前后两次定位一直在围栏内,围栏编号:%s,围栏名称:%s", efItem.getAreaNum(),efItem.getName()));
+					locElt.setFremark(String.format("保持在内,围栏编号:%s,围栏名称:%s", efItem.getAreaNum(),efItem.getName()));
 				}									
 				
 				locElt.setFdatastatus(datastatus);
+				
+				if(isSetSelected == false){
+					locElt.setFfieldstatus(EltLocEnum.IsSelected.value());
+					isSetSelected = true;
+				}
 				
 				locEltdao.addLocEltfence(locElt);										
 			}					
@@ -189,20 +207,24 @@ public class SendSmsService {
 		//yangqinxu 进出电子围栏记录  end 
 	}
 	public static void controlSMS(ChannelHandlerContext ctx, String serialNumber,
-			SerialNumber serialNum, String locationbd, String end,String Address)
+			SerialNumber serialNum, String locationbd, String end,String Address,String location)
 			throws DAOException {
 		List<ElectFence> list = electFenceDao.findBySerialNumber(serialNumber);
 		
 		String mlon = locationbd.split(",")[0];
 		String mlat = locationbd.split(",")[1];
 		
+		//取高德地图：
+		String mlongd = location.split(",")[0];
+		String mlatgd = location.split(",")[1];
+		
+		
 		///yangqinxu 位置及进出电子围栏记录  
-		SaveLocationSTable(list,serialNumber,Address,mlon,mlat);
+		SaveLocationSTable(list,serialNumber,Address,mlongd,mlatgd);
 		
 		if (list.isEmpty()) {
 			System.out.println("没有设置电子围栏");
-			
-			
+						
 		} else {
 //			String mlon = locationbd.split(",")[0];
 //			String mlat = locationbd.split(",")[1];
