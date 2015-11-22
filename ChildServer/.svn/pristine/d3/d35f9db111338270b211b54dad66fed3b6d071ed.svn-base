@@ -1,0 +1,70 @@
+package com.zhuika.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.zhuika.entity.ElectFence;
+import com.zhuika.util.DBUtil;
+
+public class JdbcElectFenceDaoImpl implements IElectFenceDao {
+
+	public void save(ElectFence ef) {
+		
+
+	}
+
+	public void update(ElectFence ef) {
+		
+
+	}
+
+	public List<ElectFence> findBySerialNumber(String serialNumber) {
+		List<ElectFence> list=new ArrayList<ElectFence>();
+		String sql="select *from electfence where serialnumber=?";
+		try {
+			Connection con=DBUtil.getConnection();
+			PreparedStatement ps=con.prepareStatement(sql);
+			ps.setString(1, serialNumber);
+			ResultSet rs=ps.executeQuery();
+			while(rs.next()){
+				ElectFence ef = createElectFence(serialNumber, rs);
+				list.add(ef);
+			}
+		} catch (Exception e) {
+			
+		}		
+		return list;
+	}
+
+	private ElectFence createElectFence(String serialNumber, ResultSet rs)
+			throws SQLException {
+		ElectFence ef=new ElectFence();
+		ef.setAreaNum(rs.getInt("areanum"));
+		ef.setCreateTime(rs.getString("createtime"));
+		ef.setId(rs.getInt("id"));
+		ef.setLocationbd(rs.getString("locationbd"));
+		ef.setLocationgd(rs.getString("locationgd"));
+		ef.setModel(rs.getString("model"));
+		ef.setScope(rs.getInt("scope"));
+		ef.setSerialNumber(serialNumber);
+		ef.setStatus(rs.getString("status"));
+		ef.setUpdateTime(rs.getString("updatetime"));
+		ef.setName(rs.getString("name"));
+		return ef;
+	}
+
+	public void delete(ElectFence ef) {
+		
+
+	}
+
+	public ElectFence findBySerialNumber(String serialNumber, String areanum) {
+		
+		return null;
+	}
+
+}

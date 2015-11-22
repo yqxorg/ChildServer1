@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="mysql-connector-java-5.1.26-bin.jar"/>
+	<classpathentry kind="lib" path="netty-all-4.0.26.Final-sources.jar"/>
+	<classpathentry kind="lib" path="netty-all-4.0.26.Final.jar"/>
+	<classpathentry kind="lib" path="dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="log4j-1.2.11.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

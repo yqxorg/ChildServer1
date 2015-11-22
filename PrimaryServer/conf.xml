@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+	 <VALUE>  
+	     <socketip>127.0.0.1</socketip>
+	     <socketport>8085</socketport>
+	 </VALUE>
+ </CONFIG>  

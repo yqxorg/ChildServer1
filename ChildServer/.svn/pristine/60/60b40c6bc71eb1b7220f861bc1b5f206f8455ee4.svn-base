@@ -1,0 +1,24 @@
+package com.zhuika.util;
+
+import java.util.HashMap;
+
+import com.RestTest;
+
+public class RestCall {
+
+	public static String restCallBack(String fromNum,String toNum)
+	{
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("18058149508", "68520027654483");
+		map.put("13713975317", "68520027660803");
+		
+		String fromNumClient = map.get(fromNum);
+		
+		String[] args={"9","json","ab9abe2cacfc9a5a2829f2222993018a","91b6bc5e40148c2a74335d2b730b8c2c",
+				"a8c88624ad064474a59225609832c505",fromNumClient,toNum,"","","","",""};
+		String result = RestTest.testCallback(true, args[2], args[3], args[4], args[5], args[6]);	
+		
+		return result;
+	}
+
+}
