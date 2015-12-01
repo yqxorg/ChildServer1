@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="174" key="HistoryTableProvider.HistoryDialog.注释"/>
 	<item value="421" key="RevertDialog.location.x"/>
+	<item value="174" key="HistoryTableProvider.HistoryDialog.注释"/>
 	<item value="220" key="DifferencesDialog.location.x"/>
 	<item value="68" key="RevertDialog.location.y"/>
 	<item value="200" key="HistoryDialog.weights.2"/>
 	<item value="200" key="HistoryDialog.weights.1"/>
-	<item value="144" key="HistoryTableProvider.SVNHistoryPage.日期"/>
 	<item value="92" key="HistoryTableProvider.SVNHistoryPage.注释"/>
+	<item value="144" key="HistoryTableProvider.SVNHistoryPage.日期"/>
 	<item value="200" key="HistoryDialog.weights.0"/>
 	<item value="525" key="RevertDialog.size.x"/>
 	<item value="445" key="RevertDialog.size.y"/>
@@ -24,14 +24,14 @@
 	<item value="377" key="ChooseUrlDialog.size.y"/>
 	<item value="20" key="HistoryTableProvider.SVNHistoryPage.修订"/>
 	<item value="400" key="HistoryDialog.size.x"/>
-	<item value="35" key="HistoryTableProvider.HistoryDialog.修订"/>
 	<item value="261" key="HistoryTableProvider.SVNHistoryPage.作者"/>
+	<item value="35" key="HistoryTableProvider.HistoryDialog.修订"/>
 	<item value="400" key="HistoryDialog.size.y"/>
 	<item value="0" key="CommitDialog.location.y"/>
 	<item value="0" key="CommitDialog.location.x"/>
 	<item value="http://lenovo-pcyang:8443/svn/ycareserver" key="RepositorySelectionPage.lastRepository"/>
-	<item value="1366" key="CommitDialog.size.x"/>
 	<item value="" key="DirectorySelectionPage.lastParent_http://lenovo-pcyang:8443/svn/ycareserver"/>
+	<item value="1366" key="CommitDialog.size.x"/>
 	<item value="728" key="CommitDialog.size.y"/>
 	<item value="35" key="HistoryDialog.location.y"/>
 	<item value="397" key="HistoryDialog.location.x"/>
