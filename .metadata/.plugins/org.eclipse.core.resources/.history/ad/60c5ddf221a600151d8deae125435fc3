@@ -255,7 +255,8 @@ public class SendSmsService {
 					 toalias =  usrid;				 
 				 }
 			}			 
-		 }	 
+		 }
+		 	toalias = toalias.replace("-", "_");		 
 			notifyPushInfo(actionType,serialNum,toalias,areaName);
 			 
 			 //notifySmsInfo(actionType,serialNum.getFphonenum(),serialNum.getNickname(),areaName);

@@ -84,9 +84,6 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings (21 items)"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="618"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -283,7 +280,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.56187546" ratioLeft="731" ratioRight="570" relationship="2" relative="cvslocation"/>
+<info part="org.eclipse.ui.editorss" ratio="0.2705611" ratioLeft="352" ratioRight="949" relationship="2" relative="cvslocation"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@4ef5c3a6" ratio="0.50383145" ratioLeft="526" ratioRight="518" relationship="2" relative="org.eclipse.ui.editorss">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
@@ -812,8 +809,29 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DiscardServer.java" tooltip="ChildServer/src/com/zhuika/server/DiscardServer.java">
+<persistable path="/ChildServer/src/com/zhuika/server/DiscardServer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Config.java" tooltip="ChildServer/src/com/zhuika/entity/Config.java">
+<persistable path="/ChildServer/src/com/zhuika/entity/Config.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XMLReader.java" tooltip="ChildServer/src/com/zhuika/util/XMLReader.java">
+<persistable path="/ChildServer/src/com/zhuika/util/XMLReader.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ActiveMqSender.java" tooltip="ChildServer/src/com/zhuika/server/ActiveMqSender.java">
+<persistable path="/ChildServer/src/com/zhuika/server/ActiveMqSender.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ActiveMqReceiver.java" tooltip="ChildServer/src/com/zhuika/server/ActiveMqReceiver.java">
 <persistable path="/ChildServer/src/com/zhuika/server/ActiveMqReceiver.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SendSmsService.java" tooltip="ChildServer/src/com/zhuika/service/SendSmsService.java">
+<persistable path="/ChildServer/src/com/zhuika/service/SendSmsService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SerialNumberService.java" tooltip="ChildServer/src/com/zhuika/service/SerialNumberService.java">
+<persistable path="/ChildServer/src/com/zhuika/service/SerialNumberService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DiscardServerHandler.java" tooltip="ChildServer/src/com/zhuika/server/DiscardServerHandler.java">
+<persistable path="/ChildServer/src/com/zhuika/server/DiscardServerHandler.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NettyServerHandler.java" tooltip="ChildServer/src/com/zhuika/server/NettyServerHandler.java">
 <persistable path="/ChildServer/src/com/zhuika/server/NettyServerHandler.java"/>
@@ -833,29 +851,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RestCall.java" tooltip="ChildServer/src/com/zhuika/util/RestCall.java">
 <persistable path="/ChildServer/src/com/zhuika/util/RestCall.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DiscardServerHandler.java" tooltip="ChildServer/src/com/zhuika/server/DiscardServerHandler.java">
-<persistable path="/ChildServer/src/com/zhuika/server/DiscardServerHandler.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.jboss.tools.common.propertieseditor.PropertiesCompoundEditor" name="log4j.properties" tooltip="ChildServer/log4j.properties">
 <persistable path="/ChildServer/log4j.properties"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.jboss.tools.common.propertieseditor.PropertiesCompoundEditor" name="log4j.properties" tooltip="ChildServer/src/log4j.properties">
-<persistable path="/ChildServer/src/log4j.properties"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LocationService.java" tooltip="ChildServer/src/com/zhuika/service/LocationService.java">
-<persistable path="/ChildServer/src/com/zhuika/service/LocationService.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LocElectfence.java" tooltip="ChildServer/src/com/zhuika/entity/LocElectfence.java">
-<persistable path="/ChildServer/src/com/zhuika/entity/LocElectfence.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JdbcLocEltfenceDaoImpl.java" tooltip="ChildServer/src/com/zhuika/dao/JdbcLocEltfenceDaoImpl.java">
-<persistable path="/ChildServer/src/com/zhuika/dao/JdbcLocEltfenceDaoImpl.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JdbcLocationInfoDaoImpl.java" tooltip="ChildServer/src/com/zhuika/dao/JdbcLocationInfoDaoImpl.java">
-<persistable path="/ChildServer/src/com/zhuika/dao/JdbcLocationInfoDaoImpl.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ILocEltfenceDao.java" tooltip="ChildServer/src/com/zhuika/dao/ILocEltfenceDao.java">
-<persistable path="/ChildServer/src/com/zhuika/dao/ILocEltfenceDao.java"/>
 </file>
 </mruList>
 </workbench>

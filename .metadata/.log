@@ -7910,3 +7910,15 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.m2e.logback.appender 4 0 2015-11-26 23:19:41.828
 !MESSAGE Unable to update index for central|http://repo1.maven.org/maven2
+!SESSION 2015-12-19 12:56:09.619 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-12-19 12:56:35.918
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-12-19 13:02:25.220
+!MESSAGE Unable to update index for central|http://repo1.maven.org/maven2
