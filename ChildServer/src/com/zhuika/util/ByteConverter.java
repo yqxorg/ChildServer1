@@ -70,11 +70,11 @@ public class ByteConverter {
           byte[] head = { 0x40,0x40 };
           buffer.put(head);
                                
-          //鎬诲抚闀垮害
+          //閹鎶氶梹鍨
           byte[] blength = ByteConverter.shortToBytes(length, false);
           buffer.put(blength);
           
-          //瀹㈡埛绔紪鍙�
+          //鐎广垺鍩涚粩顖滅椽閸欙拷
           //byte[] clientId = { 0x3, 0x02,0x00,0x00,0x00,0x00,0x10 };
           byte[] clientId =HexString2Bytes(serialno);
           buffer.put(clientId);
@@ -82,7 +82,7 @@ public class ByteConverter {
           //byte[] cmd = { 0x20,0x01 };
           buffer.put(cmd);
        
-          //鏁版嵁鍐呭 bData
+          //閺佺増宓侀崘鍛啇 bData
           buffer.put(bData);
       
            
@@ -106,7 +106,7 @@ public class ByteConverter {
       }
 	
 	//fuck   
-	//isHexData 鏄惁宸茬粡鏄�hex 瀛楃涓�
+	//isHexData 閺勵垰鎯佸鑼病閺勶拷hex 鐎涙顑佹稉锟�	
 	public static String GetSendData(String serialno,String cmd,String bData,boolean isHexChar) 
     {
 		if(!isHexChar){

@@ -22,8 +22,8 @@ public class JdbcLocEltfenceDaoImpl implements ILocEltfenceDao {
 			// TODO 自动生成方法存根
 			StringBuffer sql = new StringBuffer();
 
-			sql.append(" INSERT INTO T_LOC_ELECTFENCE( FLocFenID,FEltFenceID,FSerialnumber,FDataStatus,FFieldStatus,FEltLongitude,FEltLatitude,FEltScope,FEltAddress,FLongitude,FLatitude,FAddress,FDistance,FAddTime,FUpdateTime,FRemark,battery ) ");
-			sql.append(" values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+			sql.append(" INSERT INTO T_LOC_ELECTFENCE( FLocFenID,FEltFenceID,FSerialnumber,FDataStatus,FFieldStatus,FEltLongitude,FEltLatitude,FEltScope,FEltAddress,FLongitude,FLatitude,FAddress,FDistance,FAddTime,FUpdateTime,FRemark,battery,frecordcount ) ");
+			sql.append(" values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
 			Connection con = DBUtil.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql.toString());
@@ -50,6 +50,55 @@ public class JdbcLocEltfenceDaoImpl implements ILocEltfenceDao {
 			ps.setObject(15, datetime);
 			ps.setObject(16, locElectfenceInfo.getFremark());
 			ps.setObject(17, locElectfenceInfo.getBattery());
+			ps.setObject(18, locElectfenceInfo.getFrecordcount());
+			ps.executeUpdate();
+			
+			ISerialNumberDao snDao = new  JdbcSerialNumberDAOImpl();
+			snDao.updateSerialNumberBattery(locElectfenceInfo.getFserialnumber(), locElectfenceInfo.getBattery());
+			
+
+		} catch (Exception e) {
+			throw e;
+		} finally {
+			DBUtil.close();
+		}
+	}
+	
+	public void addLocEltfence_Single(LocElectfence locElectfenceInfo)
+			throws Exception {
+		try {
+			// TODO 自动生成方法存根
+			StringBuffer sql = new StringBuffer();
+
+			sql.append(" INSERT INTO t_loc_electfence_single( FLocFenID,FEltFenceID,FSerialnumber,FDataStatus,FFieldStatus,FEltLongitude,FEltLatitude,FEltScope,FEltAddress,FLongitude,FLatitude,FAddress,FDistance,FAddTime,FUpdateTime,FRemark,battery,frecordcount ) ");
+			sql.append(" values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+
+			Connection con = DBUtil.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql.toString());
+			// / insert 的入参处理
+			locElectfenceInfo.setFlocfenid(UUID.randomUUID().toString());
+
+			ps.setObject(1, locElectfenceInfo.getFlocfenid());
+			ps.setObject(2, locElectfenceInfo.getFeltfenceid());
+			ps.setObject(3, locElectfenceInfo.getFserialnumber());
+			ps.setObject(4, locElectfenceInfo.getFdatastatus());
+			ps.setObject(5, locElectfenceInfo.getFfieldstatus());
+			ps.setObject(6, locElectfenceInfo.getFeltlongitude());
+			ps.setObject(7, locElectfenceInfo.getFeltlatitude());
+			ps.setObject(8, locElectfenceInfo.getFeltscope());
+			ps.setObject(9, locElectfenceInfo.getFeltaddress());
+			ps.setObject(10, locElectfenceInfo.getFlongitude());
+			ps.setObject(11, locElectfenceInfo.getFlatitude());
+			ps.setObject(12, locElectfenceInfo.getFaddress());
+			ps.setObject(13, locElectfenceInfo.getFdistance());
+
+			Timestamp datetime = CommonUtil.getTimeStamp();
+
+			ps.setObject(14, datetime);
+			ps.setObject(15, datetime);
+			ps.setObject(16, locElectfenceInfo.getFremark());
+			ps.setObject(17, locElectfenceInfo.getBattery());
+			ps.setObject(18, locElectfenceInfo.getFrecordcount());
 			ps.executeUpdate();
 			
 			ISerialNumberDao snDao = new  JdbcSerialNumberDAOImpl();

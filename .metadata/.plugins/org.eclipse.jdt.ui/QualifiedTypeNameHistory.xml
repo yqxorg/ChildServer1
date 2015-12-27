@@ -5,7 +5,6 @@
 <fullyQualifiedTypeName name="java.util.UUID"/>
 <fullyQualifiedTypeName name="com.zhuika.entity.LocElectfence"/>
 <fullyQualifiedTypeName name="com.users.ejb.EjbEnum.EltLocEnum"/>
-<fullyQualifiedTypeName name="java.sql.Timestamp"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="com.zhuika.dao.MqTaskDaoIml"/>
 <fullyQualifiedTypeName name="com.watch.ejb.MqReceived"/>
@@ -26,7 +25,6 @@
 <fullyQualifiedTypeName name="com.zhuika.entity.SerialNumber"/>
 <fullyQualifiedTypeName name="com.users.ejb.SerialnumberDetach"/>
 <fullyQualifiedTypeName name="com.zhuika.dao.SerialnumberDetachDaoIml"/>
-<fullyQualifiedTypeName name="com.zhuika.util.ByteConverter"/>
 <fullyQualifiedTypeName name="com.zhuika.service.OnLineService"/>
 <fullyQualifiedTypeName name="com.zhuika.dao.SerialnumberApiphoneDaoIml"/>
 <fullyQualifiedTypeName name="java.util.List"/>
@@ -43,4 +41,8 @@
 <fullyQualifiedTypeName name="com.zhuika.util.ejbproxy"/>
 <fullyQualifiedTypeName name="com.zhuika.util.RestCall"/>
 <fullyQualifiedTypeName name="com.RestTest"/>
+<fullyQualifiedTypeName name="java.sql.Timestamp"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="com.zhuika.entity.AddressInfo"/>
+<fullyQualifiedTypeName name="com.zhuika.util.ByteConverter"/>
 </qualifiedTypeNameHistroy>

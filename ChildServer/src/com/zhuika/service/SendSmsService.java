@@ -2,10 +2,12 @@ package com.zhuika.service;
 
 import io.netty.channel.ChannelHandlerContext;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import cn.jpush.api.JPushClient;
 import cn.jpush.api.common.resp.APIConnectionException;
@@ -22,9 +24,11 @@ import com.zhuika.dao.DAOFactory;
 import com.zhuika.dao.IElectFenceDao;
 import com.zhuika.dao.ILocEltfenceDao;
 import com.zhuika.dao.ISerialNumberDao;
+import com.zhuika.entity.AddressInfo;
 import com.zhuika.entity.ElectFence;
 import com.zhuika.entity.LocElectfence;
 import com.zhuika.entity.SerialNumber;
+import com.zhuika.util.ByteConverter;
 import com.zhuika.util.FNUtil;
 import com.zhuika.util.Hex;
 import com.zhuika.util.RestCall;
@@ -92,6 +96,42 @@ public class SendSmsService {
 		
 	}
 	
+
+	
+	private static Map<String,AddressInfo> mapCheck = new HashMap<String,AddressInfo>();
+	
+	private static boolean checkDuplicate(LocElectfence locElt)
+	{
+		if(locElt.getFaddress()!=null && locElt.getFaddress().equals(""))
+		{			
+			return false;
+		}
+		if(!mapCheck.containsKey(locElt.getFserialnumber()))
+		{
+			AddressInfo addressInfo  = new AddressInfo();
+			addressInfo.setAddress(locElt.getFaddress());
+			addressInfo.setTs(ByteConverter.getTimeStamp());
+			mapCheck.put(locElt.getFserialnumber(), addressInfo);
+			return false;			
+		}
+		
+		AddressInfo addressInfo = mapCheck.get(locElt.getFserialnumber());
+		
+		if(addressInfo.getAddress().equals(locElt.getFaddress()))
+		{	
+			addressInfo.setTs(ByteConverter.getTimeStamp());
+			mapCheck.put(locElt.getFserialnumber(), addressInfo);
+			return true;
+		}
+		else{	
+			
+			addressInfo.setAddress(locElt.getFaddress());
+			addressInfo.setTs(ByteConverter.getTimeStamp());
+			mapCheck.put(locElt.getFserialnumber(), addressInfo);
+			return false;
+		}		
+		
+	}
 	//保留位置，使用独立表,yangqinxu
 	private static void SaveLocationSTable(List<ElectFence> list, String serialNumber,String Address,String mlon,String mlat,String battery)
 	{
@@ -133,13 +173,28 @@ public class SendSmsService {
 				locElt.setFdatastatus(null);	
 				locElt.setFfieldstatus(EltLocEnum.IsSelected.value());
 				locElt.setBattery(battery);
+			
+				//忠实记录信息
+				locEltdao.addLocEltfence_Single(locElt);
 				
-				locEltdao.addLocEltfence(locElt);
+//				//记录每次上传的信息
+//				locEltdao.addLocEltfence_Single(locElt);
+				//过滤数据，检查是已有地址
+				boolean checkResult = checkDuplicate(locElt);
+				
+				if(checkResult==false){
+					//只记录一次
+					locElt.setFrecordcount(1);
+					locEltdao.addLocEltfence(locElt);
+				}
+				else{
+					logger.info(String.format("地址重复，不记录到数据库%s,%s,%s,%s",locElt.getFserialnumber(),locElt.getFaddress(),locElt.getFlongitude(),locElt.getFlatitude()));
+				}
 			}
 			catch(Exception ex)
 			{
 				logger.error("isEmpty"+ex.getMessage());
-				System.out.println("isEmpty"+ex.getMessage());
+				
 			}
 			
 			return ;
@@ -213,12 +268,33 @@ public class SendSmsService {
 					isSetSelected = true;
 				}
 				
-				locEltdao.addLocEltfence(locElt);	
-				
-				//推送信息及发送短信
-				if(datastatus==1 || datastatus==3){
-					sendPushAndSms(datastatus,serialNumber,efItem.getName());
+				if(i==0){//只记录一次
+					locEltdao.addLocEltfence_Single(locElt);
 				}
+	
+				
+				//过滤数据，检查是已有地址
+				boolean checkResult = checkDuplicate(locElt);
+				
+				if(checkResult==false){
+					
+					if(i==0){//只记录一次
+						locElt.setFrecordcount(1);
+					}
+					else{
+						locElt.setFrecordcount(0);
+					}					
+					locEltdao.addLocEltfence(locElt);					
+					//推送信息及发送短信
+					if(datastatus==1 || datastatus==3){
+						sendPushAndSms(datastatus,serialNumber,efItem.getName());
+					}					
+				}
+				else{
+					logger.info(String.format("地址重复，不记录到数据库（有围栏）%s,%s,%s,%s",locElt.getFserialnumber(),locElt.getFaddress(),locElt.getFlongitude(),locElt.getFlatitude()));
+				}
+				
+
 			}					
 		} 
 		catch(Exception ex)

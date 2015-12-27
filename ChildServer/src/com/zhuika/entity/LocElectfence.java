@@ -31,7 +31,16 @@ public class LocElectfence  implements java.io.Serializable {
 	private String feltaddress;
 	private String faddress;
 	private String battery;
+	private Integer frecordcount;
     
+
+	public Integer getFrecordcount() {
+		return frecordcount;
+	}
+
+	public void setFrecordcount(Integer frecordcount) {
+		this.frecordcount = frecordcount;
+	}
 
 	public String getFlocfenid() {
 		return flocfenid;

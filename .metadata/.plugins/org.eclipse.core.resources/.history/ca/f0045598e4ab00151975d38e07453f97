@@ -1,0 +1,9 @@
+package com.zhuika.entity;
+
+import java.sql.Timestamp;
+
+public class AddressInfo {
+
+	private String address;
+	private Timestamp ts ;
+}

@@ -1,0 +1,5 @@
+package com.zhuika.entity;
+
+public class AddressInfo {
+
+}
