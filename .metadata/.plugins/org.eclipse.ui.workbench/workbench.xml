@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="13" version="2.0">
+<workbench progressCount="16" version="2.0">
 <workbenchAdvisor/>
 <window height="728" maximized="true" width="1024" x="156" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -8,7 +8,7 @@
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="159" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="266" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.genuitec.eclipse.j2eedt.core.ejb" itemType="typeToolBarContribution" x="55" y="22"/>
 <coolItem id="com.genuitec.eclipse.uml.actions" itemType="typeToolBarContribution" x="61" y="22"/>
@@ -22,7 +22,7 @@
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="78" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="101" y="22"/>
 <coolItem id="org.eclipse.team.ui.actionSet" itemType="typeToolBarContribution" x="55" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
@@ -33,7 +33,7 @@
 <coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.jboss.tools.common.propertieseditor.PropertiesCompoundEditor" itemType="typePlaceholder" x="38" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -42,61 +42,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
-<part id="7"/>
-<part id="8"/>
-<part id="9"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SendSmsService.java" partName="SendSmsService.java" path="E:/ycare/server/ChildServer1/ChildServer/src/com/zhuika/service/SendSmsService.java" title="SendSmsService.java" tooltip="ChildServer/src/com/zhuika/service/SendSmsService.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ChildServer/src/com/zhuika/service/SendSmsService.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3455" selectionTopPixel="1065"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SerialNumberService.java" partName="SerialNumberService.java" path="E:/ycare/server/ChildServer1/ChildServer/src/com/zhuika/service/SerialNumberService.java" title="SerialNumberService.java" tooltip="ChildServer/src/com/zhuika/service/SerialNumberService.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ChildServer/src/com/zhuika/service/SerialNumberService.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="942" selectionTopPixel="315"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DownMessageService.java" partName="DownMessageService.java" path="E:/ycare/server/ChildServer1/ChildServer/src/com/zhuika/service/DownMessageService.java" title="DownMessageService.java" tooltip="ChildServer/src/com/zhuika/service/DownMessageService.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ChildServer/src/com/zhuika/service/DownMessageService.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="716" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ListenService.java" partName="ListenService.java" path="E:/ycare/server/ChildServer1/ChildServer/src/com/zhuika/service/ListenService.java" title="ListenService.java" tooltip="ChildServer/src/com/zhuika/service/ListenService.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ChildServer/src/com/zhuika/service/ListenService.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LocationService.java" partName="LocationService.java" path="E:/ycare/server/ChildServer1/ChildServer/src/com/zhuika/service/LocationService.java" title="LocationService.java" tooltip="ChildServer/src/com/zhuika/service/LocationService.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ChildServer/src/com/zhuika/service/LocationService.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="11725" selectionTopPixel="4111"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BDTransUtil.java" partName="BDTransUtil.java" path="E:/ycare/server/ChildServer1/ChildServer/src/com/zhuika/util/BDTransUtil.java" title="BDTransUtil.java" tooltip="ChildServer/src/com/zhuika/util/BDTransUtil.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ChildServer/src/com/zhuika/util/BDTransUtil.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MinigpsUtil.java" partName="MinigpsUtil.java" path="E:/ycare/server/ChildServer1/ChildServer/src/com/zhuika/util/MinigpsUtil.java" title="MinigpsUtil.java" tooltip="ChildServer/src/com/zhuika/util/MinigpsUtil.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ChildServer/src/com/zhuika/util/MinigpsUtil.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XMLReader.java" partName="XMLReader.java" path="E:/ycare/server/ChildServer1/ChildServer/src/com/zhuika/util/XMLReader.java" title="XMLReader.java" tooltip="ChildServer/src/com/zhuika/util/XMLReader.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ChildServer/src/com/zhuika/util/XMLReader.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ByteConverter.java" partName="ByteConverter.java" path="E:/ycare/server/ChildServer1/ChildServer/src/com/zhuika/util/ByteConverter.java" title="ByteConverter.java" tooltip="ChildServer/src/com/zhuika/util/ByteConverter.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ChildServer/src/com/zhuika/util/ByteConverter.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3308" selectionTopPixel="225"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AddressInfo.java" partName="AddressInfo.java" path="E:/ycare/server/ChildServer1/ChildServer/src/com/zhuika/entity/AddressInfo.java" title="AddressInfo.java" tooltip="ChildServer/src/com/zhuika/entity/AddressInfo.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ChildServer/src/com/zhuika/entity/AddressInfo.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="376" selectionTopPixel="0"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.team.ui.GenericHistoryView" partName="History">
@@ -136,8 +85,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings"/>
-<category IMemento.internal.id="Warnings (22 items)"/>
+<category IMemento.internal.id="Warnings (23 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="618"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -187,7 +135,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
@@ -838,159 +786,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ChildServer/src/com/zhuika/service/SendSmsService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ChildServer/src/com/zhuika/service/SerialNumberService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ChildServer/src/com/zhuika/service/DownMessageService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ChildServer/src/com/zhuika/service/ListenService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ChildServer/src/com/zhuika/service/LocationService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ChildServer/src/com/zhuika/util/BDTransUtil.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ChildServer/src/com/zhuika/util/RestCall.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ChildServer/src/com/zhuika/util/MinigpsUtil.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ChildServer/src/com/zhuika/util/XMLReader.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ChildServer/src/com/zhuika/util/ByteConverter.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ChildServer/src/com/zhuika/entity/AddressInfo.java"/>
-</editors>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SerialNumberService.java" index="1">
-<position info="not_deleted" x="942" y="0"/>
-</item>
-<item historyLabel="DownMessageService.java" index="2">
-<position info="not_deleted" x="716" y="0"/>
-</item>
-<item historyLabel="ListenService.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="LocationService.java" index="4">
-<position info="not_deleted" x="11725" y="10"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="12538" y="10"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="13036" y="18"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="3697" y="18"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position/>
-</item>
-<item historyLabel="BDTransUtil.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="RestCall.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MinigpsUtil.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="XMLReader.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="BDTransUtil.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ByteConverter.java" index="9">
-<position info="not_deleted" x="659" y="9"/>
-</item>
-<item historyLabel="BDTransUtil.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="RestCall.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="BDTransUtil.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="3649" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="2708" y="0"/>
-</item>
-<item historyLabel="ByteConverter.java" index="9">
-<position info="not_deleted" x="659" y="9"/>
-</item>
-<item historyLabel="BDTransUtil.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="AddressInfo.java" index="10">
-<position info="not_deleted" x="371" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="2627" y="0"/>
-</item>
-<item historyLabel="AddressInfo.java" index="10">
-<position info="not_deleted" x="73" y="11"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="2705" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="2793" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="2859" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="3157" y="0"/>
-</item>
-<item historyLabel="AddressInfo.java" index="10">
-<position info="not_deleted" x="376" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="3157" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="3634" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="2973" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="3048" y="13"/>
-</item>
-<item historyLabel="ByteConverter.java" index="9">
-<position info="not_deleted" x="3313" y="0"/>
-</item>
-<item historyLabel="BDTransUtil.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="3048" y="13"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="3634" y="0"/>
-</item>
-<item historyLabel="ByteConverter.java" index="9">
-<position info="not_deleted" x="3308" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="3634" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="3136" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="5230" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="5345" y="0"/>
-</item>
-<item historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="7927" y="14"/>
-</item>
-<item active="true" historyLabel="SendSmsService.java" index="0">
-<position info="not_deleted" x="2824" y="14"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -1016,6 +812,18 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LocElectfence.java" tooltip="ChildServer/src/com/zhuika/entity/LocElectfence.java">
+<persistable path="/ChildServer/src/com/zhuika/entity/LocElectfence.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ILocEltfenceDao.java" tooltip="ChildServer/src/com/zhuika/dao/ILocEltfenceDao.java">
+<persistable path="/ChildServer/src/com/zhuika/dao/ILocEltfenceDao.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JdbcLocEltfenceDaoImpl.java" tooltip="ChildServer/src/com/zhuika/dao/JdbcLocEltfenceDaoImpl.java">
+<persistable path="/ChildServer/src/com/zhuika/dao/JdbcLocEltfenceDaoImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DAOFactory.java" tooltip="ChildServer/src/com/zhuika/dao/DAOFactory.java">
+<persistable path="/ChildServer/src/com/zhuika/dao/DAOFactory.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AddressInfo.java" tooltip="ChildServer/src/com/zhuika/entity/AddressInfo.java">
 <persistable path="/ChildServer/src/com/zhuika/entity/AddressInfo.java"/>
 </file>
@@ -1048,18 +856,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SendSmsService.java" tooltip="ChildServer/src/com/zhuika/service/SendSmsService.java">
 <persistable path="/ChildServer/src/com/zhuika/service/SendSmsService.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DiscardServer.java" tooltip="ChildServer/src/com/zhuika/server/DiscardServer.java">
-<persistable path="/ChildServer/src/com/zhuika/server/DiscardServer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Config.java" tooltip="ChildServer/src/com/zhuika/entity/Config.java">
-<persistable path="/ChildServer/src/com/zhuika/entity/Config.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ActiveMqSender.java" tooltip="ChildServer/src/com/zhuika/server/ActiveMqSender.java">
-<persistable path="/ChildServer/src/com/zhuika/server/ActiveMqSender.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ActiveMqReceiver.java" tooltip="ChildServer/src/com/zhuika/server/ActiveMqReceiver.java">
-<persistable path="/ChildServer/src/com/zhuika/server/ActiveMqReceiver.java"/>
 </file>
 </mruList>
 </workbench>
